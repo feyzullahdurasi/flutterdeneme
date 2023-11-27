@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:hexcolor/hexcolor.dart';
+import 'package:untitled/colors.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -16,6 +17,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: "DTech"),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Widget Detail"),
@@ -28,7 +30,15 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
             Text(value.toString()),
-              Text("Feyzullah", style: TextStyle(Te))
+              Text("Feyzullah",
+                  style: TextStyle(
+                      fontFamily: "Dtech",
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 10,
+                      color: HexColor(primarycolor)
+                  )
+              )
           ],)
         ),
         floatingActionButton: FloatingActionButton(

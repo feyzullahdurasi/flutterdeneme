@@ -25,10 +25,11 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.deepOrange,
           leading: const Text("Menu"),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+        body: Column(
+          children: [
+            Image.network("lib/assets/image/image1.jpg"),
+            // mainAxisAlignment: MainAxisAlignment.center,
+            ElevatedButton(onPressed: () {}, child: const Text("Tıkla")),
             Text(value.toString()),
               Text("Feyzullah",
                   style: TextStyle(
@@ -39,8 +40,7 @@ class _MyAppState extends State<MyApp> {
                       color: HexColor(primarycolor)
                   )
               )
-          ],)
-        ),
+          ],),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
